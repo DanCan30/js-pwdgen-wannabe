@@ -1,22 +1,26 @@
 
-function mainFunction() {
 
-const userName = prompt("Insert here your name");
+    //Create a function that will start when user clicks on the start button
 
-const userSurname = prompt("Insert here your surname");
+document.getElementById("start-button").onclick = function mainFunction() {
 
-const userBirthYear = prompt("Insert here your birth year");
+const userName = prompt("Insert here your name");   //Initialize a variable valued by a prompt where the user will insert his name
 
-let userFavouriteColor = prompt("Insert here your favourite color");
+const userSurname = prompt("Insert here your surname");    //Initialize a variable valued by a prompt where the user will insert his surname
 
-let currentYear = new Date().getFullYear();
-currentYear = currentYear.toString();
+const userBirthYear = prompt("Insert here your birth year");    //Initialize a variable valued by a prompt where the user will insert his birth year
 
-document.getElementById("ideal-password").innerHTML = userName + userSurname + userBirthYear + userFavouriteColor + currentYear;
+let userFavouriteColor = prompt("Insert here your favourite color");    //Initialize a variable valued by a prompt where the user will insert his favourite color
 
-console.log(typeof userName, userSurname, userBirthYear, userFavouriteColor, currentYear)
+let currentYear = new Date().getFullYear();    // Declare a variable and create a new object called Date which is composed by current day, month, year, hour, minute and second
+                                               // and use the instance ".getFullYear" to pick only the value of the year and valorize the variable
+currentYear = currentYear.toString();   // Change the variable type from number to string
+
+document.getElementById("ideal-password").innerHTML = userName + userSurname + userBirthYear + userFavouriteColor + currentYear;    //Print all the variables in an HTML element choosen via ID
+
+
+    //Manage the appearing of HTML elements changind their CSS property
 
 document.getElementById("team-sunglasses").style.display = "block";
 document.getElementById("team-deal").style.display = "block";
 }
-
