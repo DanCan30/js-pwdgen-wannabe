@@ -16,7 +16,9 @@ let currentYear = new Date().getFullYear();    // Declare a variable and create 
                                                // and use the instance ".getFullYear" to pick only the value of the year and valorize the variable
 currentYear = currentYear.toString();   // Change the variable type from number to string
 
-document.getElementById("ideal-password").innerHTML = userName + userSurname + userBirthYear + userFavouriteColor + currentYear;    //Print all the variables in an HTML element choosen via ID
+let userIdealPassword = userName + userSurname + userBirthYear + userFavouriteColor + currentYear    // Merge all variables in one variable
+
+document.getElementById("ideal-password").innerHTML = userIdealPassword;    //Print the new variable in an HTML element choosen via ID
 
 
     //Manage the appearing of HTML elements changind their CSS property
